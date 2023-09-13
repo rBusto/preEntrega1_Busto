@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100;1,100&family=Roboto:wght@300&display=swap');
+
+body{
+    background-color: #a870fe;
+}
+
+.login--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    .login{
+        width: 400px;
+        height: 440px;
+        background-color: #18181b;
+        border-radius: 15px;
+        border: #000000 2px solid;
+        .login--title{
+            h1{
+                font-family: 'Kanit';
+                font-style: normal;
+                font-weight: 600;
+                text-align: center;
+                margin-top: 40px;
+                color: #ffffff;
+            }
+        }
+        .login__input{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 25px;
+            .login__input--username{
+                margin: 12.5px;
+                label{
+                    color: #ffffff;
+                    font-family: 'Kanit';
+                    font-style: normal;
+                    font-weight: 500;
+                }
+                input{
+                    width: 320px;
+                    height: 22px;
+                    background-color: #18181b;
+                    border: #505050 0.5px solid;
+                    color: #ffffff;
+                    border-radius: 3px;
+                    padding: 0.5rem;
+                }
+                input:hover{
+                    border: #505050 2px solid;
+                }
+                input::placeholder {
+                    color: transparent;
+                }
+                input:focus{
+                    border: #a870fe 5px solid;
+                }
+            }           
+            .login__input--password{
+                margin: 12.5px;
+                a{
+                    font-family: 'Kanit';
+                    font-style: normal;
+                    font-weight: 200;
+                    color: #9d78d0;
+                    text-decoration: none;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+                label{
+                    color: #ffffff;
+                    font-family: 'Kanit';
+                    font-style: normal;
+                    font-weight: 500;
+                }
+                input{
+                    width: 320px;
+                    height: 22px;
+                    background-color: #18181b;
+                    border: #505050 0.5px solid;
+                    color: #ffffff;
+                    border-radius: 3px;
+                    padding: 0.5rem;
+                    margin-bottom: 7px;
+                }
+                input:hover{
+                    border: #505050 2px solid;
+                }
+                input::placeholder {
+                    color: transparent;
+                }
+                input:focus{
+                    border: #a870fe 5px solid;
+                }
+            }
+        }
+        .login--button{
+            width: 320px;
+            height: 28px;
+            background-color: #9146fe;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 10px;
+            border-radius:3px;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+                font-family: 'Kanit';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16.8px;
+                width: 100%;
+            }
+        }
+        .login--createAccount{
+            
+        }
+    }
+}
+
