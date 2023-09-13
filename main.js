@@ -1,5 +1,11 @@
+const MAYUSCULA = (string) => {
+    return string[0].toUpperCase() + string.substring(1).toLowerCase();
+}
+
 let apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
 let nombre = prompt("¿Cual es tu Nombre completo?");
+apellido = MAYUSCULA(apellido);
+nombre = MAYUSCULA(nombre);
 const NOMBRE_COMPLETO = nombre + " " + apellido;
 let total = 0;
 let promedio = 0;
@@ -8,7 +14,8 @@ let cantidad = 0;
 function materiaIngresada(){
     if(NOMBRE_COMPLETO !== null && NOMBRE_COMPLETO !== NaN) {
         let materia = prompt("Hola " + NOMBRE_COMPLETO + ", ¿En cual Materia queres consultar tu promedio?");
-        alert("Buenisimo!" + " Para saber tu promedio en " + materia + ", ingrese sus calificaciones a continuación...");
+        materia = MAYUSCULA(materia);
+        alert("Buenisimo!" + " Para saber tu promedio en " + materia.trim() + ", ingrese sus calificaciones a continuación...");
         return materia;
     }
 }

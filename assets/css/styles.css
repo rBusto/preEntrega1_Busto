@@ -6,7 +6,9 @@
 }
 
 body {
-  background-color: #a870fe;
+  background: linear-gradient(45deg,red,#a870fe,#8c5cd3,black);
+  background-size: 400% 400%;
+  position: relative;
 }
 
 .login--container {
