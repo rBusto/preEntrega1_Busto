@@ -37,13 +37,16 @@ let total = 0;
 let promedio = 0;
 let cantidad = 0;
 
+const materiasTotales = ["Matematica, Geografia, Biologia, Programacion y Fisica "];
+
 function materiaIngresada(){
     /*
     Propósito: Pregunta al Usuario una Materia y sus calificaciones, pasa el string a Mayuscula y retorna el valor
     de la variable materia.
     */
     if(NOMBRE_COMPLETO !== null && NOMBRE_COMPLETO !== NaN) {
-        let materia = prompt("Hola " + NOMBRE_COMPLETO + ", ¿En cual Materia queres consultar tu promedio?");
+        alert("Hola " + NOMBRE_COMPLETO + ", ¿En cual Materia queres consultar tu promedio?");
+        let materia = prompt("Las materias disponibles son: " + materiasTotales.join(", "));
         materia = MAYUSCULA(materia);
         alert("Buenisimo!" + " Para saber tu promedio en " + materia.trim() + ", ingrese sus calificaciones a continuación...");
         return materia;
@@ -59,7 +62,7 @@ while (!isNaN(calificacion) && calificacion > 0 && calificacion < 10.01){
     calificacion = parseFloat(prompt("Ingrese la nota N°" + (cantidad + 1) + ":"));
 }
 
-
+const notasNecesarias = [7, 8, 9, 10]
 promedio = total / cantidad;
 function notaFinal() {
     /*
@@ -71,10 +74,8 @@ function notaFinal() {
         alert("Felicitaciones! Aprobaste " + nombre + " !Tu promedio es de " + promedio);
     } else if (promedio < 7) {
         alert(nombre + ", lamentamos informarte que reprobaste " + ". Tu promedio es de " + promedio);
+        alert("Necesitas un minimo de " + notasNecesarias[0])
     }
 }
 
-
-
-
-// notaFinal();
+notaFinal();
