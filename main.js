@@ -6,8 +6,23 @@ const MAYUSCULA = (string) => {
     return string[0].toUpperCase() + string.substring(1).toLowerCase();
 }
 
-let apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
-let nombre = prompt("¿Cual es tu Nombre completo?");
+class Alumnos {
+    constructor(apellido, nombre, dni) {
+    this.apellido = apellido;
+    this.nombre = nombre;
+    this.dni = dni;
+    }
+}
+
+const alumno_ = new Alumnos("", "", "")
+
+alumno_.apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
+alumno_.nombre = prompt("¿Cual es tu Nombre completo?");
+alumno_.dni = prompt("Permitime saber tu numero de documento...");
+
+
+let apellido = alumno_.apellido;
+let nombre = alumno_.nombre;
 apellido = MAYUSCULA(apellido);
 nombre = MAYUSCULA(nombre);
 const NOMBRE_COMPLETO = nombre + " " + apellido;
@@ -52,4 +67,13 @@ function notaFinal() {
     }
 }
 
-notaFinal();
+
+
+
+
+
+
+console.log(alumno_)
+
+
+// notaFinal();

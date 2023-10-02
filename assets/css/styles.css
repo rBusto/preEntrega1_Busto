@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(45deg,red,#a870fe,#8c5cd3,black);
+  background: linear-gradient(45deg,red,#fe9f70,#8c5cd3,rgb(227, 10, 10));
   background-size: 400% 400%;
   position: relative;
 }
