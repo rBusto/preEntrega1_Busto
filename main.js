@@ -14,15 +14,22 @@ class Alumnos {
     }
 }
 
-const alumno_ = new Alumnos("", "", "")
+const alumno1 = new Alumnos("", "", "")
+/* Aca me hubiera gustado hacer un ciclo para crear Alumnos y meterlos en mi array de abajo pero no se me ocurrio como.*/ 
 
-alumno_.apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
-alumno_.nombre = prompt("¿Cual es tu Nombre completo?");
-alumno_.dni = prompt("Permitime saber tu numero de documento...");
+alumno1.apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
+alumno1.nombre = prompt("¿Cual es tu Nombre completo?");
+alumno1.dni = prompt("Permitime saber tu numero de documento...");
 
 
-let apellido = alumno_.apellido;
-let nombre = alumno_.nombre;
+let apellido = alumno1.apellido;
+let nombre = alumno1.nombre;
+
+let alumnosDocumento = apellido + " " + alumno1.dni;
+const alumnosCargadosHastaAhora = []
+alumnosCargadosHastaAhora.push(alumnosDocumento)
+
+
 apellido = MAYUSCULA(apellido);
 nombre = MAYUSCULA(nombre);
 const NOMBRE_COMPLETO = nombre + " " + apellido;
@@ -68,12 +75,6 @@ function notaFinal() {
 }
 
 
-
-
-
-
-
-console.log(alumno_)
 
 
 // notaFinal();
