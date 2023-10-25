@@ -49,10 +49,9 @@ function materiaIngresada(){
         let materia = prompt("Las materias disponibles son: " + materiasTotales.join(", "));
         materia = MAYUSCULA(materia);
         alert("Buenisimo!" + " Para saber tu promedio en " + materia.trim() + ", ingrese sus calificaciones a continuación...");
-        return materia;
     }
+    return materia;
 }
-
 
 materiaIngresada();
 let calificacion = parseFloat(prompt("Ingrese la nota N°1:"));
@@ -78,4 +77,13 @@ function notaFinal() {
     }
 }
 
+function Asignar(){
+    document.getElementById('nombreAlumno').value = nombre;
+    document.getElementById('apellidoAlumno').value = apellido;
+    document.getElementById('materiaAlumno').value = materia;
+    document.getElementById('promedioAlumno').value = promedio;
+}
+
+
 notaFinal();
+Asignar();
