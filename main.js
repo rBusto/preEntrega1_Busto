@@ -15,7 +15,7 @@ class Alumnos {
 }
 
 const alumno1 = new Alumnos("", "", "")
-/* Aca me hubiera gustado hacer un ciclo para crear Alumnos y meterlos en mi array de abajo pero no se me ocurrio como.*/ 
+
 
 alumno1.apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
 alumno1.nombre = prompt("¿Cual es tu Nombre completo?");
@@ -49,8 +49,9 @@ function materiaIngresada(){
         let materia = prompt("Las materias disponibles son: " + materiasTotales.join(", "));
         materia = MAYUSCULA(materia);
         alert("Buenisimo!" + " Para saber tu promedio en " + materia.trim() + ", ingrese sus calificaciones a continuación...");
+        materiaAlumnmo = materia;
+        return materia;
     }
-    return materia;
 }
 
 materiaIngresada();
@@ -80,10 +81,14 @@ function notaFinal() {
 function Asignar(){
     document.getElementById('nombreAlumno').value = nombre;
     document.getElementById('apellidoAlumno').value = apellido;
-    document.getElementById('materiaAlumno').value = materia;
+    document.getElementById('materiaAlumno').value = materiaAlumnmo;
     document.getElementById('promedioAlumno').value = promedio;
+    if (promedio >=7) {
+        document.getElementById('mensajeAprobado').innerHTML = "<label><p style='color: green;'>APROBADO</p></label>";
+    } else if (promedio < 7) {
+        document.getElementById('mensajeAprobado').innerHTML = "<label><p style='color: red;'>DESAPROBADO</p></label>";
+    }
 }
-
 
 notaFinal();
 Asignar();
