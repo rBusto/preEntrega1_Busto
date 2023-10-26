@@ -6,9 +6,7 @@
 }
 
 body {
-  background: linear-gradient(15deg,red,#70fef9,#8c5cd3,rgb(227, 10, 10));
-  background-size: 400% 400%;
-  position: relative;
+  background-color: #ffffff;
 }
 
 .login--container {

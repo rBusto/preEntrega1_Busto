@@ -19,11 +19,12 @@ const alumno1 = new Alumnos("", "", "")
 
 alumno1.apellido = prompt("Hola, Ingresa tu Apellido para continuar!");
 alumno1.nombre = prompt("¿Cual es tu Nombre completo?");
-alumno1.dni = prompt("Permitime saber tu numero de documento...");
+alumno1.dni = parseInt(prompt("Permitime saber tu numero de documento..."));
 
 
 let apellido = alumno1.apellido;
 let nombre = alumno1.nombre;
+let dni = alumno1.dni;
 
 let alumnosDocumento = apellido + " " + alumno1.dni;
 const alumnosCargadosHastaAhora = []
@@ -49,7 +50,7 @@ function materiaIngresada(){
         let materia = prompt("Las materias disponibles son: " + materiasTotales.join(", "));
         materia = MAYUSCULA(materia);
         alert("Buenisimo!" + " Para saber tu promedio en " + materia.trim() + ", ingrese sus calificaciones a continuación...");
-        materiaAlumnmo = materia;
+        materiaAlumno = materia;
         return materia;
     }
 }
@@ -81,7 +82,7 @@ function notaFinal() {
 function Asignar(){
     document.getElementById('nombreAlumno').value = nombre;
     document.getElementById('apellidoAlumno').value = apellido;
-    document.getElementById('materiaAlumno').value = materiaAlumnmo;
+    document.getElementById('materiaAlumno').value = materiaAlumno;
     document.getElementById('promedioAlumno').value = promedio;
     if (promedio >=7) {
         document.getElementById('mensajeAprobado').innerHTML = "<label><p style='color: green;'>APROBADO</p></label>";
@@ -90,5 +91,21 @@ function Asignar(){
     }
 }
 
+localStorage.setItem("Materias", JSON.stringify(materiasTotales));
+
+const storage = () => {
+    sessionStorage.setItem(apellido, dni);
+    sessionStorage.setItem(materiaAlumno, promedio);
+}
+
+function recargarPagina(){
+    window.location.reload();
+} 
+
+const boton = document.querySelector("#boton");
+boton.addEventListener("click", recargarPagina);
+
+
+storage();
 notaFinal();
 Asignar();
