@@ -6,7 +6,9 @@
 }
 
 body {
-  background-color: #ffffff;
+  background: linear-gradient(25deg,red,#70fef0,#6600ff,rgb(227, 10, 10));
+  background-size: 400% 400%;
+  position: relative;
 }
 
 .login--container {
@@ -20,7 +22,7 @@ body {
   height: 560px;
   background-color: #18181b;
   border-radius: 15px;
-  border: #000000 2px solid;
+  border: #ffffff 2px solid;
 }
 .login--container .login .login--title h1 {
   font-family: "Kanit";
