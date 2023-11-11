@@ -79,7 +79,7 @@ function notaFinal() {
     }
 }
 
-function Asignar(){
+function asignar(){
     document.getElementById('nombreAlumno').value = nombre;
     document.getElementById('apellidoAlumno').value = apellido;
     document.getElementById('materiaAlumno').value = materiaAlumno;
@@ -108,4 +108,4 @@ boton.addEventListener("click", recargarPagina);
 
 storage();
 notaFinal();
-Asignar();
+asignar();
