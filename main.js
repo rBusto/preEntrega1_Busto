@@ -106,6 +106,34 @@ const boton = document.querySelector("#boton");
 boton.addEventListener("click", recargarPagina);
 
 
+const mensajeToastify = () => {
+    Toastify({
+        text: "Felicidades, Aprobaste!",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+}
+
+const promesaToastify = () => {
+    return new Promise ((resolve, reject) => {
+        if (promedio >= 7) {
+            resolve(mensajeToastify());
+        } else {
+            reject("Desaprobaste...");
+        }
+    })
+}
+
 storage();
 notaFinal();
 asignar();
+promesaToastify();
