@@ -15,51 +15,85 @@
 
 
     <div class="login--container">
+
         <div class="login">
             <div class="login--title">
                 <h1>entregaFinal_Busto</h1>
             </div>
             <div class="login__input">
+
                 <div class="login__input--username">
-                    <label for="Usuario">Nombre_Alumno</label>
-                    <input type="text" name="Usuario" id="nombreAlumno" readonly>
+                    <label for="Usuario">DNI:</label>
+                    <input type="text" name="Usuario" id="dniAlumno">
                 </div>
+
                 <div class="login__input--password">
-                    <label for="Usuario">Apellido_Alumno</label>                  
-                    <input type="text" name="Contraseña" id="apellidoAlumno" readonly>
+                    <label for="Usuario">Apellido:</label>                  
+                    <input type="text" name="Contraseña" id="apellidoAlumno">
                 </div>
+
                 <div class="login__input--password">
-                    <label for="Usuario">Materia</label>                  
-                    <input type="text" name="Contraseña" id="materiaAlumno" readonly>
+                    <label for="Usuario">Materia:</label>                  
+                    <input type="text" name="Contraseña" id="materiaAlumno">
                 </div>
+
+                <div class="login--button" style="margin-bottom: 30px;" id="boton">
+                    <button style= "
+                    background: none;
+                    color: inherit;
+                    border: none;
+                    padding: 0;
+                    font: inherit;
+                    cursor: pointer;
+                    outline: inherit;
+                    ">
+                    <a href="#">Consultar Promedio</a>
+                    <script src="main.js"></script>
+                    </button>
+                </div>
+
                 <div class="login__input--password" style ="text-align:center;">
-                    <label for="Usuario">Promedio</label>                  
+                    <label for="Usuario">Calificación Final:</label>                  
                     <input type="text" name="Contraseña" id="promedioAlumno" style="height: 35px;" readonly>
                 </div>
+
                 <div class="login__input--username" style ="text-align:center; margin-top: 0px;" id="mensajeAprobado">
                 </div>
-            </div>
-            <div class="login--button" style="margin-bottom: 70px;" id="boton">
-                <button style= "
-                background: none;
-                color: inherit;
-                border: none;
-                padding: 0;
-                font: inherit;
-                cursor: pointer;
-                outline: inherit;
-                ">
-                <a href="#">Ejecutar Script otra Vez</a>
-                <script src="main.js"></script>
-                </button>
-            </div>
-            <div class="login--createAccount">
-                
+
             </div>
         </div>
+
+        <div class="login promedio" style="background-color: #353535;">
+            <div class="login__input">
+
+                <div class="login__input--username" style ="text-align:center;">
+                    <label for="Usuario">Calificación primerExamen:</label>
+                    <input type="number" name="Usuario" id="primerNota" min="1" max="10">
+                </div>
+
+                <div class="login__input--password" style ="text-align:center;">
+                    <label for="Usuario">Calificación segundoExamen:</label>                  
+                    <input type="number" name="Contraseña" id="segundaNota" min="1" max="10">
+                </div>
+
+                <div class="login__input--password" style ="text-align:center;">
+                    <label for="Usuario">Calificación tercerExamen:</label>                  
+                    <input type="number" name="Contraseña" id="tercerNota" min="1" max="10">
+                </div>
+
+
+                <div class="login__input--username" style ="text-align:center; margin-top: 0px;" id="mensajeAprobado">
+                </div>
+
+            </div>
+        </div>
+
     </div>
+    
+    
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="main.js"></script>
+    <script type='text/javascript' src='main.js'></script>
+
 </body>
 </html>

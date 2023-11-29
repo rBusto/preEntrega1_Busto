@@ -6,9 +6,15 @@
 }
 
 body {
-  background: linear-gradient(25deg,red,rgb(0, 0, 0),#ff0000,rgb(227, 10, 10));
-  background-size: 400% 400%;
-  position: relative;
+  background-color: #cdafaf;
+}
+
+.promedio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+  background-color: #9146fe;
 }
 
 .login--container {
@@ -21,8 +27,8 @@ body {
   width: 400px;
   height: 560px;
   background-color: #18181b;
-  border-radius: 15px;
-  border: #ffffff 2px solid;
+  border-radius: 7px;
+  border: #000000 1px solid;
 }
 .login--container .login .login--title h1 {
   font-family: "Kanit";
@@ -117,7 +123,7 @@ body {
   text-align: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0 10px;
+
   border-radius: 3px;
 }
 .login--container .login .login--button a {
